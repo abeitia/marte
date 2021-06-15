@@ -1,0 +1,517 @@
+/*****Estilos para el sitio web Marte2*****/
+:root {
+    --text-color: rgb(0,0,0);
+    --text-light-color: rgb(255,255,255);
+    --contrast-color: rgb(189, 55, 0);
+    --bg-dark-color: rgb(0,0,0);
+    --bg-white-color: rgb(255,255,255);
+    --bg-light-color: rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+
+    font-family: 'Alegreya','Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.5;
+    
+}
+
+h1, h2 {   
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+
+    /*text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;*/
+}
+
+a {
+    color: var(--contrast-color);
+    text-decoration: none;
+    border: none;
+    /*border-bottom: 1px dotted var(--text-color);*/
+}
+
+    a:hover {
+        color: var(--text-color);
+        text-decoration: none;
+        border: none;
+        /*border-bottom: 1px dotted var(--contrast-color);*/
+    }
+
+cite {
+    font-style: normal;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+/*Classe per amagar un element que serà visible únicament als lectors de pantalla (aplicat per a millorar l'accessibilitat)*/
+.sr {
+    position:absolute;
+    height:1px;    
+    width:1px;    
+    overflow:hidden;    
+    clip:rect(1px, 1px, 1px, 1px);
+}
+
+/****************************
+Contenidors del lloc
+*****************************/
+header {
+    height: 18vh;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /*background:green;*/
+    /*background: var(--bg-white-color);*/
+}
+
+footer {
+    height: 44vh;
+    padding-top: 15px;
+    padding-bottom: 15px;    
+    background-color: var(--bg-dark-color);
+    color: #fff;
+
+    text-align:center;
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+   /* margin-left: 71px;
+    background-color: yellow;
+    margin-right: auto;
+    margin-left: auto;*/
+}
+
+/*
+Les regles que van a continuació aconsegueixen que els continguts dins de l'element de class .container s'adaptin als diversos dispositius.
+La class .container defineix un contenidor que ocupa el 100% de la pantalla del dispositiu, amb un farcit per l'esquerra i per la dreta de 15 píxels, i marges per l'esquerra i per la dreta automàtics, per aconseguir un disseny centrat.
+A continuació utilitzem media queries, un mòdul de CSS3 que permet adaptar la representació del contingut a les característiques del dispositiu i que s'estudia en la unitat 5.
+Amb les 4 media queries utilitzades indiquem l'amplada màxima que el .container ha de tenir quan els dispositius tinguin l'amplada mínima indicada pel punt de trencament (breakpoint).
+*/
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+
+}
+  
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+}
+  
+@media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+}
+
+/****************************
+Titular del lloc
+*****************************/
+
+/*h1.banner {
+    color: white;
+}
+
+h1.banner::before {
+    background-image: url(../img/isologo-white.png);
+    background-size: 100%;
+    display: inline-block;
+    width: 2rem; 
+    height: 2rem;
+    margin-right: 15px;
+    content:"";
+}
+
+h1.banner a {
+    color: inherit;
+    border: none;
+}
+
+h1.banner span {
+    color:var(--contrast-color);
+}*/
+
+/*************************
+Contenido del footer
+**************************/
+footer {
+    font-size: 0.8rem;
+    color: var(--text-light-color);
+}
+
+footer p {
+    font-size: inherit;
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: inherit;
+    border: none;
+}
+
+footer a:hover {
+    color: var(--contrast-color);
+    border: none;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+footer ul li::after {
+    content: "     ";
+    padding-left: 10px;
+}
+/*footer ul li:last-child::after {
+    content: "";
+}*/
+
+form ul li {
+    display: block;
+}
+
+
+/****************************
+Menú de navegación del sitio
+*****************************/
+nav {
+    text-align: left;
+    /*color: white;*/
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 0;
+}
+
+    nav ul li::after {
+        content: " ";
+        width: 10px;
+        padding-right: 5px;
+    }
+
+/*nav ul li::before {
+    content: "·";
+    width: 10px;
+    padding-right: 5px;
+}
+
+nav ul li:first-child::before {
+    content: "";
+}*/
+
+
+
+
+/****************************
+Pàgina d'inici
+*****************************/
+/*body.home {
+    background-image: url(../img/home-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    color: white;
+}*/
+
+body.home header {
+    background-color: transparent;
+}
+
+/*body.home main {
+    padding-top: 10vh;
+    height: 57.5vh;
+}*/
+
+/*body.home footer {
+    background-color: transparent;
+}*/
+
+body.home h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+/*body.home h1::after {
+    background-image: url(../img/isologo-white.png);
+    background-size: 100%;
+    display: inline-block;
+    width: 2rem; 
+    height: 2rem;
+    margin-left: 15px;
+    content:"";
+}*/
+
+body.home h1>span {
+    color:var(--contrast-color);
+}
+
+
+/* No se usa*/
+/*body.home a {
+    color: inherit;
+    border: none;
+}
+
+body.home a:hover {
+    border: none;
+    color: var(--contrast-color);
+}*/
+/* No se usa*/
+
+
+
+
+
+/* Puede que se llegue a usar; */
+body.home nav ul li {
+    font-size: 1.3rem;
+}
+
+/* Links Header*/
+header a {
+    color: inherit;
+    border: none;
+}
+
+header a:hover {
+        border: none;
+        color: var(--contrast-color);
+    }
+
+
+/* header li.active {*/
+.active {
+    font-weight: bold;
+    /*font-weight: 800;*/
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: 3px solid var(--text-color);
+    /*border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--text-color);*/
+}
+
+/* nav li.active::before {
+    font-weight: 400;
+} */
+    body .home main p {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body.home footer p {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
+.book-list {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+    grid-gap: 20px;
+}
+
+    .book-list div {
+        background-color: var(--bg-light-color);
+        padding: 10px;
+    }
+
+
+
+
+.mission-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+    .mission-list figure {
+        /*background-color: var(--bg-light-color);*/
+       
+        /*padding: 5px;*/
+    }
+
+        .mission-list figure:nth-of-type(odd) {
+            background-color: var(--bg-light-color);
+        }
+
+.container-mission {
+    display: grid;
+    grid-template-areas:
+        "sidebar content";
+  
+    grid-template-columns: 1fr 3fr;
+    /*gap: 20px;*/
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.video-fluid {
+    position: relative;
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+iframe.video-fluid-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    padding-top: 15px;
+    text-align: center;
+}
+.movie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    grid-gap: 20px;
+}
+
+aside ul {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    aside ul li a {
+        color: var(--contrast-color);
+        text-decoration: none;
+        border: none;
+    }
+
+aside ul li a:hover {
+       
+    color: rgb(0,0,0);
+}
+
+article ul {
+    list-style:square inside;
+}
+
+.f1 {
+    
+    border:2px solid white;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: var(--bg-white-color);
+    color: var(--text-color);
+    border: none;
+    text-transform: uppercase;
+}
+
+    input[type="submit"]:hover {
+        /*box-shadow: 0 7px 14px var(--contrast-color),0 3px 6px transparent;*/
+        background-color: var(--contrast-color);
+        color: var(--text-light-color);
+        cursor: pointer;
+        border: none;
+    }
