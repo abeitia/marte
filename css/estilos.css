@@ -1,3 +1,4 @@
+  
 /*****Estilos para el sitio web Marte2*****/
 :root {
     --text-color: rgb(0,0,0);
@@ -439,21 +440,6 @@ iframe {
 
 
 
-.mission-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0px;
-}
-
-    .mission-list figure {
-        /*background-color: var(--bg-light-color);*/
-       
-        /*padding: 5px;*/
-    }
-
-        .mission-list figure:nth-of-type(odd) {
-            background-color: var(--bg-light-color);
-        }
 
 
 
@@ -533,38 +519,58 @@ input[type="submit"] {
         border: none;
     }
 
-/* Pagina Mars 2020*/
+/* Pagina Index */
 @media (min-width: 768px) {
 
-    .container-mission {
+    .mission-list {
         display: grid;
-        grid-template-areas: "sidebar content";
-        grid-template-columns: 1fr 3fr;
-        /*gap: 20px;*/
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0px;
     }
 
-    aside {
-        grid-area: sidebar;
-    }
-
-    article {
-        grid-area: content;
-    }
-
-}
-
-/* Pagina Ciencia Ficcion*/
-@media (min-width: 768px) {
-    .book-list {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-gap: 20px;
-    }
-
-        .book-list div {
-            background-color: var(--bg-light-color);
-            padding: 10px;
+        .mission-list figure {
+            /*background-color: var(--bg-light-color);*/
+            /*padding: 5px;*/
         }
+
+            .mission-list figure:nth-of-type(odd) {
+                background-color: var(--bg-light-color);
+            }
+
+
 }
+
+    /* Pagina Mars 2020 */
+    @media (min-width: 768px) {
+
+        .container-mission {
+            display: grid;
+            grid-template-areas: "sidebar content";
+            grid-template-columns: 1fr 3fr;
+            /*gap: 20px;*/
+        }
+
+        aside {
+            grid-area: sidebar;
+        }
+
+        article {
+            grid-area: content;
+        }
+    }
+
+    /* Pagina Ciencia Ficcion*/
+    @media (min-width: 768px) {
+        .book-list {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 20px;
+        }
+
+            .book-list div {
+                background-color: var(--bg-light-color);
+                padding: 10px;
+            }
+    }
 
     
