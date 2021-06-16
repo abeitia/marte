@@ -466,22 +466,7 @@ iframe {
             background-color: var(--bg-light-color);
         }
 
-.container-mission {
-    display: grid;
-    grid-template-areas:
-        "sidebar content";
-  
-    grid-template-columns: 1fr 3fr;
-    /*gap: 20px;*/
-}
 
-aside {
-    grid-area: sidebar;
-}
-
-.content {
-    grid-area: content;
-}
 
 .video-fluid {
     position: relative;
@@ -558,3 +543,24 @@ input[type="submit"] {
         cursor: pointer;
         border: none;
     }
+
+    /* Pagina Mars 2020*/
+@media (min-width: 768px) {
+
+    .container-mission {
+        display: grid;
+        grid-template-areas: "sidebar content";
+        grid-template-columns: 1fr 3fr;
+        /*gap: 20px;*/
+    }
+
+    aside {
+        grid-area: sidebar;
+    }
+
+    article {
+        grid-area: content;
+    }
+
+}
+    
