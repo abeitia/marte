@@ -249,13 +249,22 @@ form ul li {
 /****************************
 Menú de navegación del sitio
 *****************************/
+
+/* falta centrar el logo*/
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* validar si es necesario */
 nav {
     text-align: center;
 }
 
     nav ul {
         list-style: none;
-       /* list-style-type: none;*/
         font-size: 0.9rem;
         text-align: center;
         padding: 0;
@@ -272,9 +281,25 @@ nav ul li {
 
 @media (min-width: 768px) {
 
+    header img {
+        display: block;
+        margin-left: 0;
+       /* margin-right: auto;*/
+    }
+
     nav {
         text-align: left;
+        /*  margin-left: 0; */
+
     }
+
+        nav ul {
+
+            font-size: 0.9rem;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+        }
 
         nav ul li {
             display: inline-block;
@@ -533,4 +558,3 @@ input[type="submit"] {
         cursor: pointer;
         border: none;
     }
-
