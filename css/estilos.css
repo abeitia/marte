@@ -434,18 +434,7 @@ iframe {
     display: block;
 }
 
-.book-list {
-    
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    
-    grid-gap: 20px;
-}
 
-    .book-list div {
-        background-color: var(--bg-light-color);
-        padding: 10px;
-    }
 
 
 
@@ -544,7 +533,7 @@ input[type="submit"] {
         border: none;
     }
 
-    /* Pagina Mars 2020*/
+/* Pagina Mars 2020*/
 @media (min-width: 768px) {
 
     .container-mission {
@@ -563,4 +552,19 @@ input[type="submit"] {
     }
 
 }
+
+/* Pagina Ciencia Ficcion*/
+@media (min-width: 768px) {
+    .book-list {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 20px;
+    }
+
+        .book-list div {
+            background-color: var(--bg-light-color);
+            padding: 10px;
+        }
+}
+
     
