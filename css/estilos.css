@@ -438,11 +438,6 @@ iframe {
 
 
 
-
-
-
-
-
 .video-fluid {
     position: relative;
     display: block;
@@ -453,7 +448,7 @@ iframe {
     overflow: hidden;
 }
 
-iframe.video-fluid-item {
+/*iframe.video-fluid-item {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -467,33 +462,10 @@ figcaption {
     font-size: 0.9rem;
     padding-top: 15px;
     text-align: center;
-}
-.movie-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
-    grid-gap: 20px;
-}
+}*/
 
-aside ul {
-    list-style: none;
-    font-family: 'Open Sans', sans-serif;
-}
 
-    aside ul li a {
-        color: var(--contrast-color);
-        text-decoration: none;
-        border: none;
-    }
 
-aside ul li a:hover {
-       
-    color: rgb(0,0,0);
-}
-
-article ul {
-    list-style:square inside;
-}
 
 .f1 {
     
@@ -519,7 +491,10 @@ input[type="submit"] {
         border: none;
     }
 
-/* Pagina Index */
+/****************************
+Página de Inicio
+*****************************/
+
 @media (min-width: 768px) {
 
     .mission-list {
@@ -540,7 +515,29 @@ input[type="submit"] {
 
 }
 
-    /* Pagina Mars 2020 */
+/****************************
+Página Mars 2020
+*****************************/
+
+/* Menú Secundario*/
+aside ul {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    aside ul li a {
+        color: var(--contrast-color);
+        text-decoration: none;
+        border: none;
+    }
+
+        aside ul li a:hover {
+            color: rgb(0,0,0);
+        }
+/* Artículo */
+article ul {
+    list-style: square inside;
+}
     @media (min-width: 768px) {
 
         .container-mission {
@@ -559,7 +556,9 @@ input[type="submit"] {
         }
     }
 
-    /* Pagina Ciencia Ficcion*/
+/****************************
+Página Ciencia Ficción
+*****************************/
     @media (min-width: 768px) {
         .book-list {
             display: grid;
@@ -573,4 +572,19 @@ input[type="submit"] {
             }
     }
 
+/****************************
+Página Cine
+*****************************/
+    @media (min-width: 768px) {
+
+        .movie-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 80%;
+            grid-gap: 20px;
+        }
+
+}
+
+    
     
