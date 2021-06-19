@@ -21,7 +21,7 @@ body {
     font-weight: 400;
     color: var(--text-color);
     line-height: 1.5;
-    
+    /* background-color: rgb(250, 235, 215); */
 }
 
 h1, h2 {   
@@ -209,12 +209,12 @@ footer {
     font-size: 0.8rem;
     color: var(--text-light-color);
 }
-
 footer p {
     font-size: inherit;
-    margin-bottom: 0.5rem;
-}
+    margin-bottom: 0.0rem;
+    /* margin-bottom: 0.5rem; */
 
+}
 footer a {
     color: inherit;
     border: none;
@@ -224,7 +224,6 @@ footer a:hover {
     color: var(--contrast-color);
     border: none;
 }
-
 footer ul {
     list-style-type: none;
 }
@@ -238,13 +237,39 @@ footer ul li::after {
     content: "     ";
     padding-left: 10px;
 }
+
 /*footer ul li:last-child::after {
     content: "";
 }*/
 
+
+
+/****************************
+Form en el footer
+*****************************/
+
+
 form ul li {
     display: block;
 }
+
+form label.linehover
+{
+    font-size: 14px;
+	color: #999;
+	width: 80%;
+	border-bottom: 1px solid red;
+	padding-bottom: 5px;
+
+    display: block;
+	margin-bottom: .5rem;
+
+}
+
+/* label {
+	display: inline-block;
+	margin-bottom: .5rem;
+} */
 
 
 /****************************
@@ -344,9 +369,7 @@ body.home header {
     height: 57.5vh;
 }*/
 
-/*body.home footer {
-    background-color: transparent;
-}*/
+
 
 body.home h1 {
     font-size: 3rem;
@@ -430,9 +453,11 @@ header a.active:hover {
     font-weight: 700;
 }
 
-body.home footer p {
+/* ajustes */
+/* body.home footer p {
     margin-bottom: 0;
-}
+} */
+/* ajustes */
 
 img {
     max-width: 100%;
@@ -443,6 +468,10 @@ img {
     max-width: 100%;
     display: block;
 }*/
+
+iframe{
+    border:0;
+}
 
 
 
@@ -553,6 +582,16 @@ aside ul {
             color: rgb(0,0,0);
         }
 /* Artículo */
+article {
+    text-align: justify;
+}
+article p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+  
 article ul {
     list-style: square inside;
 }
@@ -615,4 +654,5 @@ Página Cine
 
 }
 
+    
     
