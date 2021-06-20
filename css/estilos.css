@@ -1,4 +1,4 @@
-/*****Estilos para el sitio web Marte2*****/
+/***** Estilos para el sitio web Marte *****/
 :root {
     --text-color: rgb(0,0,0);
     --text-light-color: rgb(255,255,255);
@@ -15,59 +15,16 @@
 }
 
 body {
-    
+  
 
     font-family: 'Alegreya', serif;
     font-weight: 400;
     color: var(--text-color);
     line-height: 1.5;
-    /* background-color: rgb(250, 235, 215); */
 }
 
 h1, h2 {   
     font-weight: 700;
-
-   /* background-color:red;
-    padding:0;
-    margin:0;*/
-}
-/*
-h2 {
-    background-color: red;
-}*/
-
-/*h3 {
-    font-weight:normal;
-}*/
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-
-    /*background-color: orangered;*/
-}
-
-a {
-    color: var(--contrast-color);
-    text-decoration: none;
-    border: none;
-    /*border-bottom: 1px dotted var(--text-color);*/
-}
-
-    a:hover {
-        color: var(--text-color);
-        text-decoration: none;
-        border: none;
-        /*border-bottom: 1px dotted var(--contrast-color);*/
-    }
-
-cite {
-    font-style: normal;
-   /* font-family: Georgia, Times, serif;*/
-}
-
-abbr {
-    text-decoration: none;
 }
 
 h1 {
@@ -76,19 +33,48 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
-
     margin-bottom: 1.5rem;
-    
 }
 
-/*h3 {
-    font-size: 1.75rem;
+
+p {
+    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
-h4 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}*/
+
+a {
+    color: var(--contrast-color);
+    text-decoration: none;
+    border: none;
+}
+
+    a:hover {
+        color: var(--text-color);
+        text-decoration: none;
+        border: none;
+    }
+
+cite {
+    font-style: normal;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+/* Para quitar el borde de los videos*/
+iframe {
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/*Clases*/
 
 .center {
     text-align: center;
@@ -100,22 +86,13 @@ h4 {
     margin-right: auto;
 }
 
-.bold {
-    font-weight: 700;
-}
+
 
 .img-fluid {
     max-width: 100%;
 }
 
-/*Classe per amagar un element que serà visible únicament als lectors de pantalla (aplicat per a millorar l'accessibilitat)*/
-.sr {
-    position:absolute;
-    height:1px;    
-    width:1px;    
-    overflow:hidden;    
-    clip:rect(1px, 1px, 1px, 1px);
-}
+
 
 /****************************
 Contenedores del sitio
@@ -124,65 +101,34 @@ header {
     height: 18vh;
     padding-top: 15px;
     padding-bottom: 15px;
-    background:green;
-    /*background: var(--bg-white-color);*/
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bg-white-color);
 }
 
 footer {
-    height: 44vh;
+    height: 90vh;
     padding-top: 15px;
-    padding-bottom: 15px;    
+    padding-bottom: 15px;
     background-color: var(--bg-dark-color);
-    color: #fff;
-
-    text-align:center;
+    color: var(--text-light-color);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 main {
     padding-top: 50px;
     padding-bottom: 50px;
-   /* margin-left: 71px;
-    background-color: yellow;
-    margin-right: auto;
-    margin-left: auto;*/
 }
 
-.hero {
-    background-color: var(--bg-dark-color);
-    /*background-color: orange;*/
-    color: var(--text-light-color);
-    background-image: url(../img/bg-hero-mars.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* background-size: 100%;*/
-    background-position: right top;
-    
-    height: 20rem;
-   /* background-color: green;*/
-    padding-top: 15px;
-}
-
-.banner {
-    
-   margin-top:60px;
-/* background-color:blue;*/
- 
-}
-
-div.hero p {
-    margin-top:15px;
-    font-weight: 400;
-    font-style:italic;
-}
 
 
 
 
 /*
-Les regles que van a continuació aconsegueixen que els continguts dins de l'element de class .container s'adaptin als diversos dispositius.
-La class .container defineix un contenidor que ocupa el 100% de la pantalla del dispositiu, amb un farcit per l'esquerra i per la dreta de 15 píxels, i marges per l'esquerra i per la dreta automàtics, per aconseguir un disseny centrat.
-A continuació utilitzem media queries, un mòdul de CSS3 que permet adaptar la representació del contingut a les característiques del dispositiu i que s'estudia en la unitat 5.
-Amb les 4 media queries utilitzades indiquem l'amplada màxima que el .container ha de tenir quan els dispositius tinguin l'amplada mínima indicada pel punt de trencament (breakpoint).
+Las reglas que a continuación consiguen que los contenidos dentro del elemento de class .container adapten a los diversos dispositivos.
+La class .container define un contenedor que ocupa el 100% de la pantalla del dispositivo, con un relleno por la izquierda y por la derecha de 15 píxeles, y márgenes por la izquierda y por la derecha automáticos, para conseguir un diseño centrado .
+A continuación utilizamos media queries, un módulo de CSS3 que permite adaptar la representación del contenido a las características del dispositivo y que se estudia en la unidad 5.
+Con las 4 media queries utilizadas indicamos la anchura máxima que el .container debe tener cuando los dispositivos tengan la anchura mínima indicada por el punto de rotura (breakpoint).
 */
 .container {
     margin-right: auto;
@@ -217,32 +163,8 @@ Amb les 4 media queries utilitzades indiquem l'amplada màxima que el .container
     }
 }
 
-/****************************
-Titular del lloc
-*****************************/
 
-/*h1.banner {
-    color: white;
-}
 
-h1.banner::before {
-    background-image: url(../img/isologo-white.png);
-    background-size: 100%;
-    display: inline-block;
-    width: 2rem; 
-    height: 2rem;
-    margin-right: 15px;
-    content:"";
-}
-
-h1.banner a {
-    color: inherit;
-    border: none;
-}
-
-h1.banner span {
-    color:var(--contrast-color);
-}*/
 
 /*************************
 Contenido del footer
@@ -253,10 +175,20 @@ footer {
 }
 footer p {
     font-size: inherit;
-    margin-bottom: 0.0rem;
-    /* margin-bottom: 0.5rem; */
-
 }
+
+/* la palabra newsletter */
+footer span{
+    font-style:italic;
+}
+
+    footer div {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+
 footer a {
     color: inherit;
     border: none;
@@ -266,9 +198,11 @@ footer a:hover {
     color: var(--contrast-color);
     border: none;
 }
-footer ul {
-    list-style-type: none;
-}
+    footer ul {
+        list-style-type: none;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
 
 footer ul li {
     display: inline-block;
@@ -280,45 +214,121 @@ footer ul li::after {
     padding-left: 10px;
 }
 
-/*footer ul li:last-child::after {
-    content: "";
-}*/
+.intro{
+    font-size:2.5rem;
+}
 
 
+/* Form en el footer */
+form {
 
-/****************************
-Form en el footer
-*****************************/
+    margin: 0 auto;
+    width: 60%;
+}
+
 
 
 form ul li {
     display: block;
 }
 
+
+
+/* La linea decorativa */
 form label.linehover
 {
-    font-size: 14px;
-	color: #999;
-	width: 80%;
-	border-bottom: 1px solid red;
+	width: 100%;
+	border-bottom: 1px solid var(--text-light-color);
 	padding-bottom: 5px;
-
     display: block;
 	margin-bottom: .5rem;
 
 }
 
-/* label {
-	display: inline-block;
-	margin-bottom: .5rem;
-} */
+input[type="email"] {
+    text-align: center;
+    border: none;
+    background-color: var(--bg-dark-color);
+    color: var(--text-light-color);
+    padding: 15px;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+
+
+
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    margin-top: 25px;
+    padding: 15px 20px;
+    background-color: var(--bg-white-color);
+    color: var(--text-color);
+    border: none;
+    text-transform: uppercase;
+}
+
+    input[type="submit"]:hover {
+        background-color: var(--contrast-color);
+        color: var(--text-light-color);
+        cursor: pointer;
+        border: none;
+    }
+
 
 
 /****************************
 Menú de navegación del sitio
 *****************************/
+body header {
+    background-color: transparent;
+}
+body h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
 
-/* falta centrar el logo*/
+
+
+body nav ul li {
+    font-size: 1.3rem;
+}
+
+/* Links Header*/
+header a {
+    color: inherit;
+    border: none;
+}
+
+
+/* elemento activo del menu de navegación */
+.active {
+
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: 3px solid var(--text-color);
+}
+
+header a:hover {
+    color: var(--contrast-color);
+}
+
+header a.active:hover {
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--contrast-color);
+    border-bottom: 3px solid var(--contrast-color);
+}
+
+
+
+body  main p {
+    font-size: 1.3rem;
+}
+
+
 
 header img {
     display: block;
@@ -326,10 +336,8 @@ header img {
     margin-right: auto;
 }
 
-/* validar si es necesario */
-nav {
-    text-align: center;
-}
+
+
 
     nav ul {
         list-style: none;
@@ -352,13 +360,10 @@ nav ul li {
     header img {
         display: block;
         margin-left: 0;
-       /* margin-right: auto;*/
     }
 
     nav {
         text-align: left;
-        /*  margin-left: 0; */
-
     }
 
         nav ul {
@@ -384,139 +389,11 @@ nav ul li {
    
 }
    
-    
-
-
-
-
-
+ 
 
 /****************************
-Pàgina d'inici
+Videos
 *****************************/
-/*body.home {
-    background-image: url(../img/home-hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    color: white;
-}*/
-
-body.home header {
-    background-color: transparent;
-}
-
-/*body.home main {
-    padding-top: 10vh;
-    height: 57.5vh;
-}*/
-
-
-
-body.home h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-}
-
-/*body.home h1::after {
-    background-image: url(../img/isologo-white.png);
-    background-size: 100%;
-    display: inline-block;
-    width: 2rem; 
-    height: 2rem;
-    margin-left: 15px;
-    content:"";
-}*/
-
-body.home h1>span {
-    color:var(--contrast-color);
-}
-
-
-/* No se usa*/
-/*body.home a {
-    color: inherit;
-    border: none;
-}
-
-body.home a:hover {
-    border: none;
-    color: var(--contrast-color);
-}*/
-/* No se usa*/
-
-
-
-
-
-/* Puede que se llegue a usar; */
-body.home nav ul li {
-    font-size: 1.3rem;
-}
-
-/* Links Header*/
-header a {
-    color: inherit;
-   /* color: var(--text-color);*/
-    border: none;
-}
- 
-/* header li.active {*/
-.active {
-    font-weight: bold;
-    /*font-weight: 800;*/
-    text-decoration: none;
-
-    color: var(--text-color);
-    border-bottom: 3px solid var(--text-color);
-   
-}
-
-header a:hover {
-    /*border: none;*/
-    color: var(--contrast-color);
-    
-}
-
-header a.active:hover {
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--contrast-color);
-    border-bottom: 3px solid var(--contrast-color);
-}
-
-
-
-/* nav li.active::before {
-    font-weight: 400;
-} */
-    body .home main p {
-    font-size: 1.3rem;
-    font-weight: 700;
-}
-
-/* ajustes */
-/* body.home footer p {
-    margin-bottom: 0;
-} */
-/* ajustes */
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/*iframe {
-    max-width: 100%;
-    display: block;
-}*/
-
-iframe{
-    border:0;
-}
-
-
-
 
 .video-fluid {
     position: relative;
@@ -552,40 +429,40 @@ figcaption {
     font-size: 0.9rem;
     padding-top: 15px;
     text-align: center;
-   /* background-color: var(--bg-light-color);*/
 }
 
 
 
 
-.f1 {
-    
-    border:2px solid white;
-}
 
-input[type="submit"] {
-    display: inline-block;
-    width: auto;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    background-color: var(--bg-white-color);
-    color: var(--text-color);
-    border: none;
-    text-transform: uppercase;
-}
-
-    input[type="submit"]:hover {
-        /*box-shadow: 0 7px 14px var(--contrast-color),0 3px 6px transparent;*/
-        background-color: var(--contrast-color);
-        color: var(--text-light-color);
-        cursor: pointer;
-        border: none;
-    }
 
 /****************************
 Página de Inicio
 *****************************/
 
+/*Sección 1*/
+.hero {
+    background-color: var(--bg-dark-color);
+    color: var(--text-light-color);
+    background-image: url(../img/bg-hero-mars.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    height: 20rem;
+    padding-top: 15px;
+}
+
+.banner {
+    margin-top: 60px;
+}
+
+section.hero p {
+    margin-top: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*Sección 2*/
 section h2{
     margin-bottom:0px;
 }
@@ -609,11 +486,6 @@ figure p{
         grid-gap: 0px;
     }
 
-        .mission-list figure {
-            /*background-color: var(--bg-light-color);*/
-            /*padding: 5px;*/
-        }
-
             .mission-list figure:nth-of-type(odd) {
                 background-color: var(--bg-light-color);
             }
@@ -627,9 +499,15 @@ Página Mars 2020
 
 /* Menú Secundario*/
 
-aside {
-    /*border: 2px solid black;*/
+.bold {
+    font-weight: 800;
 }
+
+aside {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 aside div{
     text-transform:uppercase;
     margin-bottom:1.5rem;
@@ -638,7 +516,7 @@ aside div{
 
 aside ul {
     list-style: none;
-    font-family: 'Open Sans', sans-serif;
+
 }
 
     aside ul li a {
@@ -654,10 +532,13 @@ aside ul {
 /* Artículo */
 article {
     text-align: justify;
-
-   
     
 }
+    article h2 {
+        text-align: left;
+    }
+
+    /* Guiones para separar palabras al final*/
 article p {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -671,7 +552,7 @@ article p {
         list-style: square outside ;
         
         margin-bottom: 1.5rem;
-        font-size:1.1rem;
+        font-size:1.3rem;
     }
 
     article ul li{
@@ -683,13 +564,13 @@ article figcaption {
 
 }
 
+/* areas del grid */
     @media (min-width: 768px) {
 
         .container-mission {
             display: grid;
             grid-template-areas: "sidebar content";
             grid-template-columns: 1fr 3fr;
-            /*gap: 20px;*/
         }
 
         aside {
@@ -773,7 +654,6 @@ div.movie-list cite {
         .movie-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            /* width: 80%; */
             grid-gap: 40px 20px;
         }
 
