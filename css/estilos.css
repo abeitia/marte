@@ -17,7 +17,7 @@
 body {
     
 
-    font-family: 'Alegreya','Open Sans', sans-serif;
+    font-family: 'Alegreya', serif;
     font-weight: 400;
     color: var(--text-color);
     line-height: 1.5;
@@ -26,16 +26,25 @@ body {
 
 h1, h2 {   
     font-weight: 700;
+
+   /* background-color:red;
+    padding:0;
+    margin:0;*/
 }
+/*
+h2 {
+    background-color: red;
+}*/
+
+/*h3 {
+    font-weight:normal;
+}*/
 
 p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
 
-    /*text-align: justify;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;*/
+    /*background-color: orangered;*/
 }
 
 a {
@@ -67,7 +76,9 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
+
     margin-bottom: 1.5rem;
+    
 }
 
 /*h3 {
@@ -135,6 +146,37 @@ main {
     margin-right: auto;
     margin-left: auto;*/
 }
+
+.hero {
+    background-color: var(--bg-dark-color);
+    /*background-color: orange;*/
+    color: var(--text-light-color);
+    background-image: url(../img/bg-hero-mars.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-size: 100%;*/
+    background-position: right top;
+    
+    height: 20rem;
+   /* background-color: green;*/
+    padding-top: 15px;
+}
+
+.banner {
+    
+   margin-top:60px;
+/* background-color:blue;*/
+ 
+}
+
+div.hero p {
+    margin-top:15px;
+    font-weight: 400;
+    font-style:italic;
+}
+
+
+
 
 /*
 Les regles que van a continuació aconsegueixen que els continguts dins de l'element de class .container s'adaptin als diversos dispositius.
@@ -504,11 +546,13 @@ iframe.video-fluid-item {
     padding-top: 56.25%;
 }
 
+
+
 figcaption {
     font-size: 0.9rem;
     padding-top: 15px;
     text-align: center;
-    
+   /* background-color: var(--bg-light-color);*/
 }
 
 
@@ -542,6 +586,21 @@ input[type="submit"] {
 Página de Inicio
 *****************************/
 
+section h2{
+    margin-bottom:0px;
+}
+
+figure a {
+    display:block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0px 15px 15px;
+}
+
+figure p{
+    margin: 20px 15px;
+}
+
 @media (min-width: 768px) {
 
     .mission-list {
@@ -567,6 +626,16 @@ Página Mars 2020
 *****************************/
 
 /* Menú Secundario*/
+
+aside {
+    /*border: 2px solid black;*/
+}
+aside div{
+    text-transform:uppercase;
+    margin-bottom:1.5rem;
+    margin-top:1.5rem;
+}
+
 aside ul {
     list-style: none;
     font-family: 'Open Sans', sans-serif;
@@ -581,9 +650,13 @@ aside ul {
         aside ul li a:hover {
             color: rgb(0,0,0);
         }
+
 /* Artículo */
 article {
     text-align: justify;
+
+   
+    
 }
 article p {
     -webkit-hyphens: auto;
@@ -591,10 +664,25 @@ article p {
     -ms-hyphens: auto;
     hyphens: auto;
   }
-  
-article ul {
-    list-style: square inside;
+
+
+
+    article ul {
+        list-style: square outside ;
+        
+        margin-bottom: 1.5rem;
+        font-size:1.1rem;
+    }
+
+    article ul li{
+        margin-left:35px;
+    }
+
+article figcaption {
+   background-color:transparent;
+
 }
+
     @media (min-width: 768px) {
 
         .container-mission {
@@ -617,7 +705,30 @@ article ul {
 Página Ciencia Ficción
 *****************************/
 
-cite::before {
+div.book-list {
+    margin-top: 1.5rem;
+}
+
+.book-list div, .book-list blockquote {
+    background-color: var(--bg-light-color);
+    padding: 10px;
+}
+.book-title {
+font-weight: 700;
+font-size: 2.7rem;
+    }
+
+blockquote p {
+    font-style: italic;
+}
+
+div.book-list cite {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+div.book-list cite::before {
+
     content: "";
     background-color: var(--contrast-color);
     width: 28px;
@@ -634,25 +745,40 @@ cite::before {
             grid-gap: 20px;
         }
 
-            .book-list div {
-                background-color: var(--bg-light-color);
-                padding: 10px;
-            }
+            
     }
 
 /****************************
 Página Cine
 *****************************/
+
+div.movie-list {
+    margin-top: 1.5rem;
+}
+
+div.movie-list figcaption {
+    padding-top: 15px;
+    padding-bottom:30px;
+    background-color: var(--bg-light-color);
+}
+
+div.movie-list cite {
+    font-weight:700;
+    font-size:1.2rem;
+
+}
+
     @media (min-width: 768px) {
 
         .movie-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
             /* width: 80%; */
-            grid-gap: 20px;
+            grid-gap: 40px 20px;
         }
 
 }
 
+    
     
     
